@@ -1,4 +1,7 @@
 package at.htl.entity;
 
-public class PlantType {
+public enum PlantType {
+    TREE,
+    BUSH,
+    FLOWER
 }
