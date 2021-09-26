@@ -1,7 +1,9 @@
 package at.htl.entity;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -11,12 +13,12 @@ public class CropArea {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @OneToMany
-    private HashMap< Integer, Plant > cropSubdivision = new HashMap<Integer, Plant>();
+    private List<Plant> cropSubdivision;
 
     public CropArea() {
     }
 
-    public CropArea(Long id, HashMap<Integer, Plant> cropSubdivision) {
+    public CropArea(Long id, List<Plant> cropSubdivision) {
         this.id = id;
         this.cropSubdivision = cropSubdivision;
     }
@@ -30,13 +32,14 @@ public class CropArea {
         this.id = id;
     }
 
-    public HashMap<Integer, Plant> getCropSubdivision() {
+    public List<Plant> getCropSubdivision() {
         return cropSubdivision;
     }
 
-    public void setCropSubdivision(HashMap<Integer, Plant> cropSubdivision) {
+    public void setCropSubdivision(List<Plant> cropSubdivision) {
         this.cropSubdivision = cropSubdivision;
     }
+
     //endregion
 
 
