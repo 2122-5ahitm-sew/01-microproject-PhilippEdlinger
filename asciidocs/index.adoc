@@ -1,0 +1,23 @@
+= Baumschule
+Philipp Edlinger
+ifndef::imagesdir[:imagesdir: images]
+//:toc-placement!:  // prevents the generation of the doc at this position, so it can be printed afterwards
+:sourcedir: ../src/main/java
+:icons: font
+:sectnums:    // Nummerierung der Überschriften / section numbering
+:toc: left
+
+//Need this blank line after ifdef, don't know why...
+ifdef::backend-html5[]
+
+// print the toc here (not at the default position)
+//toc::[]
+
+== CLD
+
+plantuml::plantuml/cld.puml[png]
+
+=== Description
+The idea of this project is to be able to manage and oversee a nursery garden. A customer orders a plant and gets the bill in form of a transaction in return.
+
+

@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ef3e5456-3c69-4999-ab65-49859dc13e92" name="Default Changelist" comment="" />
+    <list default="true" id="ef3e5456-3c69-4999-ab65-49859dc13e92" name="Default Changelist" comment="added asciidocs files">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asciidocs.demo/demo.adoc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asciidocs.demo/images/animal-pet-cute-kitten-45201.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asciidocs.demo/index.adoc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asciidocs.demo/minutes-of-meeting.adoc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asciidocs.demo/sysspec.adoc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asciidocs/images/cld.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asciidocs/index.adoc" beforeDir="false" afterPath="$PROJECT_DIR$/asciidocs/index.adoc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file-to-add-checklist.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/doc-folder-images.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/doc-folder-output.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/doc-folder-revealjs.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/doc-folder.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/doc-setup-gh-pages.png" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -9,6 +25,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1yZgyIYwZr2VrWjxoKuHiouORMQ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -25,19 +49,10 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/backend" />
     <property name="nodejs_package_manager_path" value="npm" />
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.CommitDialog" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -48,7 +63,18 @@
       <option name="presentableId" value="Default" />
       <updated>1632464778247</updated>
       <workItem from="1632464781878" duration="2496000" />
+      <workItem from="1632675316798" duration="31000" />
+      <workItem from="1632675351354" duration="17000" />
+      <workItem from="1632675378356" duration="9018000" />
     </task>
+    <task id="LOCAL-00001" summary="added asciidocs files">
+      <created>1632682172849</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1632682172849</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -64,5 +90,14 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added asciidocs files" />
+    <option name="LAST_COMMIT_MESSAGE" value="added asciidocs files" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
