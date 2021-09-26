@@ -15,7 +15,7 @@ ifdef::backend-html5[]
 
 == CLD
 
-plantuml::plantuml/cld.puml[cld,png]
+plantuml::plantuml/cld.puml[png]
 
 === Header 2
 
