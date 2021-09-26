@@ -17,5 +17,7 @@ ifdef::backend-html5[]
 
 plantuml::plantuml/cld.puml[png]
 
-=== Header 2
+=== Description
+The idea of this project is to be able to manage and oversee a nursery garden. A customer orders a plant and gets the bill in form of a transaction in return.
+
 
