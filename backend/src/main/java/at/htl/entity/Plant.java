@@ -1,9 +1,6 @@
 package at.htl.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
@@ -14,14 +11,17 @@ public class Plant {
     private Long id;
     private String plantName;
     private PlantType plantType;
+    @ManyToOne
+    private CareAction maintenance;
 
     public Plant() {
     }
 
-    public Plant(Long id, String plantName, PlantType plantType) {
+    public Plant(Long id, String plantName, PlantType plantType, CareAction maintenance) {
         this.id = id;
         this.plantName = plantName;
         this.plantType = plantType;
+        this.maintenance = maintenance;
     }
 
     //region Getter and Setter
@@ -56,11 +56,11 @@ public class Plant {
         if (this == o) return true;
         if (!(o instanceof Plant)) return false;
         Plant plant = (Plant) o;
-        return Objects.equals(id, plant.id) && Objects.equals(plantName, plant.plantName) && plantType == plant.plantType;
+        return Objects.equals(id, plant.id) && Objects.equals(plantName, plant.plantName) && plantType == plant.plantType && Objects.equals(maintenance, plant.maintenance);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, plantName, plantType);
+        return Objects.hash(id, plantName, plantType, maintenance);
     }
 }

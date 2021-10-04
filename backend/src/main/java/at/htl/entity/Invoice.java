@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 @Entity
-public class Transaction {
+public class Invoice {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -54,8 +54,8 @@ public class Transaction {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Transaction)) return false;
-        Transaction that = (Transaction) o;
+        if (!(o instanceof Invoice)) return false;
+        Invoice that = (Invoice) o;
         return Objects.equals(id, that.id) && Objects.equals(plant, that.plant) && Objects.equals(customer, that.customer) && Objects.equals(dateOfTransaction, that.dateOfTransaction);
     }
 
