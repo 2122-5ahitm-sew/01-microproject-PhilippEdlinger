@@ -1,9 +1,6 @@
 package at.htl.entity;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -12,15 +9,15 @@ public class CropArea {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @OneToMany
-    private List<Plant> cropSubdivision;
+    @ManyToOne
+    private Plant plant;
 
     public CropArea() {
     }
 
-    public CropArea(Long id, List<Plant> cropSubdivision) {
+    public CropArea(Long id, Plant plant) {
         this.id = id;
-        this.cropSubdivision = cropSubdivision;
+        this.plant = plant;
     }
 
     //region Getter and Setter
@@ -32,27 +29,26 @@ public class CropArea {
         this.id = id;
     }
 
-    public List<Plant> getCropSubdivision() {
-        return cropSubdivision;
+    public Plant getPlant() {
+        return plant;
     }
 
-    public void setCropSubdivision(List<Plant> cropSubdivision) {
-        this.cropSubdivision = cropSubdivision;
+    public void setPlant(Plant plant) {
+        this.plant = plant;
     }
 
     //endregion
-
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof CropArea)) return false;
         CropArea cropArea = (CropArea) o;
-        return Objects.equals(id, cropArea.id) && Objects.equals(cropSubdivision, cropArea.cropSubdivision);
+        return Objects.equals(id, cropArea.id) && Objects.equals(plant, cropArea.plant);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, cropSubdivision);
+        return Objects.hash(id, plant);
     }
 }

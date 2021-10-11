@@ -13,17 +13,13 @@ public class Customer {
     private String firstName;
     private String lastName;
 
-    @OneToMany(mappedBy = "customer")
-    private List<Transaction> transactionList;
-
     public Customer() {
     }
 
-    public Customer(Long id, String firstName, String lastName, List<Transaction> transactionList) {
+    public Customer(Long id, String firstName, String lastName) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.transactionList = transactionList;
     }
 
     //region Getter and Setter
@@ -51,26 +47,18 @@ public class Customer {
         this.lastName = lastName;
     }
 
-    public List<Transaction> getTransactionList() {
-        return transactionList;
-    }
-
-    public void setTransactionList(List<Transaction> transactionList) {
-        this.transactionList = transactionList;
-    }
     //endregion
-
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Customer)) return false;
         Customer customer = (Customer) o;
-        return Objects.equals(id, customer.id) && Objects.equals(firstName, customer.firstName) && Objects.equals(lastName, customer.lastName) && Objects.equals(transactionList, customer.transactionList);
+        return Objects.equals(id, customer.id) && Objects.equals(firstName, customer.firstName) && Objects.equals(lastName, customer.lastName);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, firstName, lastName, transactionList);
+        return Objects.hash(id, firstName, lastName);
     }
 }
