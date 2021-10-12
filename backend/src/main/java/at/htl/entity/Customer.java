@@ -11,9 +11,9 @@ public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @JsonbProperty("customer_id")
-    private Long id;
-    private String firstName;
-    private String lastName;
+    public Long id;
+    public String firstName;
+    public String lastName;
 
     public Customer() {
     }
@@ -50,6 +50,16 @@ public class Customer {
     }
 
     //endregion
+
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                '}';
+    }
 
     @Override
     public boolean equals(Object o) {
