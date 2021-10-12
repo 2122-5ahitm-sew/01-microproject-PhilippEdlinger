@@ -1,5 +1,6 @@
 package at.htl.entity;
 
+import javax.json.bind.annotation.JsonbProperty;
 import javax.persistence.*;
 import java.util.Objects;
 
@@ -8,6 +9,7 @@ public class CropArea {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @JsonbProperty("crop_area_id")
     private Long id;
     @ManyToOne
     private Plant plant;

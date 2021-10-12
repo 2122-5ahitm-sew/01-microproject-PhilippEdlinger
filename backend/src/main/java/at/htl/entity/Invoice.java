@@ -1,5 +1,6 @@
 package at.htl.entity;
 
+import javax.json.bind.annotation.JsonbProperty;
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.Objects;
@@ -11,8 +12,10 @@ public class Invoice {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @ManyToOne
+    @JsonbProperty("plant")
     private Plant plant;
     @ManyToOne
+    @JsonbProperty("customer")
     private Customer customer;
     private LocalDate dateOfTransaction;
 

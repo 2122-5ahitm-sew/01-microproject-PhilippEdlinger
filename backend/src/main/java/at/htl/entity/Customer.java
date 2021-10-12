@@ -1,5 +1,6 @@
 package at.htl.entity;
 
+import javax.json.bind.annotation.JsonbProperty;
 import javax.persistence.*;
 import java.util.List;
 import java.util.Objects;
@@ -9,6 +10,7 @@ public class Customer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @JsonbProperty("customer_id")
     private Long id;
     private String firstName;
     private String lastName;
