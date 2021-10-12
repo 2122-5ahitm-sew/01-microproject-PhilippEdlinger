@@ -1,6 +1,7 @@
 package at.htl.boundary;
 
 import at.htl.repository.CustomerRepository;
+import org.jboss.logging.Logger;
 
 import javax.inject.Inject;
 import javax.ws.rs.GET;
@@ -13,6 +14,9 @@ public class CustomerResource {
 
     @Inject
     CustomerRepository customerRepository;
+
+    @Inject
+    Logger logger;
 
     @GET
     public Response getAllCustomer (){
