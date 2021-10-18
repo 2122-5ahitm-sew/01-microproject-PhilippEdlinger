@@ -35,4 +35,12 @@ public class PlantResource {
 
     }
 
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getAllPlants(){
+        return Response
+                .accepted(plantRepository.listAll())
+                .build();
+    }
+
 }
