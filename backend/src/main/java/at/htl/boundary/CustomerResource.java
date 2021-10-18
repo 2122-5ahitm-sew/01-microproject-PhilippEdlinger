@@ -23,7 +23,7 @@ public class CustomerResource {
     @Produces(MediaType.APPLICATION_JSON)
     public Response getAllCustomer (){
             return Response
-                    .accepted(customerRepository.findAll())
+                    .accepted(customerRepository.listAll())
                     .build();
     }
 
