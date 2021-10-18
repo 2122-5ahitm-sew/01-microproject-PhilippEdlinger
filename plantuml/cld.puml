@@ -1,0 +1,38 @@
+@startuml
+class Customer{
+    - Long id
+    - String firstName
+    - String lastName
+    - Plant orderedPlant
+}
+
+class Invoice{
+    - Long id
+    - Plant plant
+    - Customer customer
+    - LocalDate dateOfTransaction
+}
+
+class Plant{
+    - Long id
+    - String plantName
+    - PlantType plantType
+    - CareAction maintenance
+}
+
+class CropArea{
+    - Long id
+    - Plant Plant
+}
+
+class CareAction{
+    - Long id
+    - String maintenanceName
+    - Double amountOfCarePerWeek
+}
+
+Customer "1" -- "*" Invoice : buys
+Plant "1" -right- "*" Invoice : is ordered
+Plant "*" -left- "1" CareAction: maintenance
+CropArea "1" -- "*" Plant : planted
+@enduml
