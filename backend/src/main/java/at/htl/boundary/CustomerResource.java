@@ -10,7 +10,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-@Path(("customer"))
+@Path(("/customer"))
 public class CustomerResource {
 
     @Inject
@@ -20,10 +20,20 @@ public class CustomerResource {
     Logger logger;
 
     @GET
+    @Produces(MediaType.APPLICATION_JSON)
     public Response getAllCustomer (){
             return Response
                     .accepted(customerRepository.findAll())
                     .build();
+    }
+
+    @Path("/{id}")
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getCustomerById(@PathParam("id") Long id){
+        return Response
+                .accepted(customerRepository.findById(id))
+                .build();
     }
 
     @POST
@@ -43,4 +53,6 @@ public class CustomerResource {
                 .entity(customer)
                 .build();
     }
+
+
 }
