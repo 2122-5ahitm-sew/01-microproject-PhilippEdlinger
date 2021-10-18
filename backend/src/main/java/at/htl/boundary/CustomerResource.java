@@ -48,6 +48,8 @@ public class CustomerResource {
         customer.firstName = firstName;
         customer.lastName = lastName;
 
+        customerRepository.persist(customer);
+
         return Response
                 .status(Response.Status.CREATED)
                 .entity(customer)
