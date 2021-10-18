@@ -48,7 +48,7 @@ public class CustomerResource {
         customer.firstName = firstName;
         customer.lastName = lastName;
 
-        customerRepository.persist(customer);
+        customerRepository.save(customer);
 
         return Response
                 .status(Response.Status.CREATED)

@@ -7,5 +7,11 @@ import javax.enterprise.context.ApplicationScoped;
 import javax.transaction.Transactional;
 
 @ApplicationScoped
-public class CustomerRepository implements PanacheRepositoryBase {
+public class CustomerRepository implements PanacheRepositoryBase<Customer, Long>{
+
+    @Transactional
+    public void save(Customer customer){
+        getEntityManager().persist(customer);
+    }
+
 }
